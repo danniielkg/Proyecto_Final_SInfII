@@ -1,0 +1,149 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="/static/images/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/styles_carrito.css">
+    <title>Carrito Compras</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-section container">
+            <h3>Carrito de Compras</h3>
+            <div>
+                <img onclick="showCart(this)" class="cart" src="/static/images/cart.png" alt="">
+                <p class="count-product">0</p>
+            </div>
+            <!--Ventana Carrito-->
+            <div class="cart-products" id="products-id">
+                <p class="close-btn" onclick="closeBtn()">X</p>
+                <h3>Mi carrito</h3>
+                <div class="card-items"></div>
+                <h2>Total: $<strong class="price-total">0</strong></h2>
+            </div>
+        </div>
+    </header>
+    <section class="container">
+        <div class="products">
+            <div class="carts">
+                <div>
+                    <img src="./static/images/products/imagen-1.jpg" alt="">
+                    <p><span>20</span>$</p>
+                </div>
+                <p class="title">La Magia de los Numeros</p>
+                <a href="" data-id="1" class="btn-add-cart">Agregar Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./static/images/products/imagen-2.jpg" alt="">
+                    <p><span>35</span>$</p>
+                </div>
+                <p class="title"> Matematicas para Niños</p>
+                <a href="" class="btn-add-cart" data-id="2">Agregar Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./static/images/products/Imagen-3.jpg" alt="">
+                    <p><span>15.50</span>$</p>
+                </div>
+                <p class="title"> Filosia de la Ciencia</p>
+                <a href="" data-id="3" class="btn-add-cart">Agregar Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./static/images/products/Imagen-4.jpg" alt="">
+                    <p><span>20.20</span>$</p>
+                </div>
+                <p class="title"> Programacion Python</p>
+                <a href="" data-id="4" class="btn-add-cart">Agregar Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./static/images/products/Imagen-5.jpg" alt="">
+                    <p><span>19</span>$</p>
+                </div>
+                <p class="title"> Python para Todos</p>
+                <a href="" data-id="5" class="btn-add-cart">Agregar Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./static/images/products/imagen-6.jpg" alt="">
+                    <p><span>45</span>$</p>
+                </div>
+                <p class="title"> Python Flask</p>
+                <a href="" data-id="6" class="btn-add-cart">Agregar Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./static/images/products/Imagen-7.jpg" alt="">
+                    <p><span>23.99</span>$</p>
+                </div>
+                <p class="title"> Fool Man</p>
+                <a href="" data-id="7" class="btn-add-cart">Agregar Carrrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./static/images/products/Imagen-8.jpg" alt="">
+                    <p><span>50</span>$</p>
+                </div>
+                <p class="title"> Filosofia Felina</p>
+                <a href="" data-id="8" class="btn-add-cart">Agregar Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./static/images/products/Imagen-9.jpg" alt="">
+                    <p><span>16</span>$</p>
+                </div>
+                <p class="title"> Asuntos de Honor</p>
+                <a href="" data-id="9" class="btn-add-cart">Agregar Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./static/images/products/Imagen-10.jpg" alt="">
+                    <p><span>17.50</span>$</p>
+                </div>
+                <p class="title"> Living Alone</p>
+                <a href="" data-id="10" class="btn-add-cart">Agregar Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./static/images/products/Imagen-11.jpg" alt="">
+                    <p><span>45</span>$</p>
+                </div>
+                <p class="title"> El Cerebro Creativo</p>
+                <a href="" data-id="11" class="btn-add-cart">Agregar Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./static/images/products/imagen-12.jpg" alt="">
+                    <p><span>45</span>$</p>
+                </div>
+                <p class="title"> El Hobbit</p>
+                <a href="" data-id="11" class="btn-add-cart">Agregar Carrito</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showCart(x) {
+            document.getElementById("products-id").style.display = "block";
+        }
+        function closeBtn() {
+            document.getElementById("products-id").style.display = "none";
+        }
+    </script>
+    <script src="{{url_for('static',filename='js/custom.js')}}"></script>
+
+</body>
+
+</html>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+.form-label {
+    color: rgb(252, 252, 252);
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+  }

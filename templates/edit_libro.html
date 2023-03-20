@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="col-md-6 offset-md-3">
+    <div class="card card-body">
+        <form action="/update/{{listlibro.0}}" method="POST">
+            <div class="form-group pt-2">
+                <input type="text" name="nombre" placeholder="Nombre" value="{{listlibro.1}}" class="form-control">
+            </div>
+            <div class="form-group pt-2">
+                <input type="text" name="autor" placeholder="Autor" value="{{listlibro.2}}" class="form-control">
+            </div>
+            <div class="form-group pt-2">
+                <input type="text" name="descripcion" placeholder="Descripcion" value="{{listlibro.3}}" class="form-control">
+            </div>
+            <div class="form-group pt-2">
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="submit" class="btn btn-success">Editar</button>
+                </div>
+            </div>           
+        </form>
+    </div>
+</div>
+
+{% endblock %}
